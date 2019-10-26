@@ -1,16 +1,16 @@
 
 .top-menu {
-    background: #1976d2;
+    background: #0b2c8e;
     padding: 2px 15px;
 }
 
 .logo {
-  max-height: 55px;
+  max-height: 75px;
 }
 
 
 .courses {
-    max-width: 400px;
+    max-width: 600px;
     margin: 50px auto;
 }
 
