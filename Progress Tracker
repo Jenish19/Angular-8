@@ -24,12 +24,12 @@ ol.progress-meter::before
 	position:absolute;
 	content:"";
 	height: 10px;
-	 width:70px;
+	 width:120px;
 	 background: #fff;
 	 top:35px;	
 }
 ol.progress-meter::after{
-	right: -13px
+	right: -2px
 }
 
 ol.progress-meter li {
@@ -37,7 +37,7 @@ ol.progress-meter li {
   text-align: center;
   text-indent: -19px;
   height: 36px;
-  width: 24.99%;
+  width: 50%;
   font-size: 12px;
   border-bottom-width: 4px;
   border-bottom-style: solid;
@@ -57,8 +57,8 @@ ol.progress-meter li.done {
 }
 ol.progress-meter li.done:before {
   content: "\2713";
-  height: 19px;
-  width: 19px;
+  height: 20px;
+  width: 20px;
   line-height: 21.85px;
   bottom: -28.175px;
   border: none;
@@ -69,7 +69,7 @@ ol.progress-meter li.todo {
 }
 ol.progress-meter li.todo:before {
   content: "\2B24";
-  font-size: 19px;
+  font-size: 29px;
   bottom: -28.175px;
   line-height: 21.85px;
   
@@ -97,7 +97,7 @@ ol.progress-meter li.todo:before {
 
 <div class="container">
   <ol class="progress-meter">
-    <li class="progress-point done">05:20 mins</li><li class="progress-point done">05:10 mins</li><li class="progress-point done">Link</li><li class="progress-point todo">Connect</li>
+    <li class="progress-point done">05:20 mins</li><li class="progress-point done">Upload</li><li class="progress-point done">File Viewable</li><li class="progress-point todo">Connect</li>
   </ol>
 </div>
 </body>
