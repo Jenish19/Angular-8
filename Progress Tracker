@@ -5,7 +5,7 @@
 	<style type="text/css">
 		
 .container {
-  width: 500px;
+  width: 250px;
   margin: 0 auto;
 }
 
@@ -18,19 +18,7 @@ ol.progress-meter {
   list-style-type: none;
   position:relative;
 }
-ol.progress-meter::after,
-ol.progress-meter::before
-{
-	position:absolute;
-	content:"";
-	height: 10px;
-	 width:120px;
-	 background: #fff;
-	 top:35px;	
-}
-ol.progress-meter::after{
-	right: -2px
-}
+
 
 ol.progress-meter li {
   display: inline-block;
@@ -52,53 +40,116 @@ ol.progress-meter li:before {
   left: -o-calc(50% - 9.5px);
   left: calc(50% - 9.5px);
 }
-ol.progress-meter li.done {
+
+
+/*********************
+Commomn class
+*************************/
+ol.progress-meter li.done,
+ol.progress-meter li.todo,
+ol.progress-meter li.red,
+ol.progress-meter li.yellow {
   font-size: 12px;
 }
-ol.progress-meter li.done:before {
+ol.progress-meter li.done:before,
+ol.progress-meter li.todo:before,
+ol.progress-meter li.red:before,
+ol.progress-meter li.yellow:before {
   content: "\2713";
   height: 20px;
   width: 20px;
+  left:0px;
   line-height: 21.85px;
   bottom: -28.175px;
   border: none;
   border-radius: 19px;
 }
-ol.progress-meter li.todo {
-  font-size: 12px;
-}
-ol.progress-meter li.todo:before {
-  content: "\2B24";
-  font-size: 29px;
-  bottom: -28.175px;
-  line-height: 21.85px;
+ol.progress-meter li.done.last:before,
+ol.progress-meter li.todo.last:before,
+ol.progress-meter li.red.last:before,
+ol.progress-meter li.yellow.last:before {
+
+  left:112px;
   
 }
-ol.progress-meter li.done {
+
+ol.progress-meter li.done,
+ol.progress-meter li.todo,
+ol.progress-meter li.red,
+ol.progress-meter li.yellow {
   color: black;
   border-bottom-color: yellowgreen;
 }
+
+/*******
+Done class
+********************/
 ol.progress-meter li.done:before {
   color: white;
   background-color: yellowgreen;
 }
+
+/*******
+TODO class
+********************/
 ol.progress-meter li.todo {
   color: silver;
   border-bottom-color: silver;
 }
 ol.progress-meter li.todo:before {
-  color: silver;
+  color: #fff;
+   background-color: silver;
 }
+ol.progress-meter li.todo:before {
+	content: "\2713";
+}
+ol.progress-meter li label{position: relative; left: -50%}
+ol.progress-meter li.last label{position: relative; right: -50%; left: auto;}
+/*******
+Red class
+********************/
+ol.progress-meter li.red:before {
+  color: #fff;
+   background-color: red;
+}
+ol.progress-meter li.red {
+  color: black;
+  border-bottom-color: red;
+}	
+
+ol.progress-meter li.red:before {
+	content: "\0021";
+}
+/*******
+Yellow class
+********************/
+ol.progress-meter li.yellow:before {
+  color: #fff;
+   background-color: #ebba34;
+}
+ol.progress-meter li.yellow {
+  color: black;
+  border-bottom-color: #ebba34;
+}	
+
+ol.progress-meter li.yellow:before {
+	content: "\0021";
+}
+
+
 
 	</style>
 </head>
 <body>
 <!--Don't add spaces or newlines between the li elements!-->
 
-<div class="container">
-  <ol class="progress-meter">
-   <li class="progress-point done">Upload</li><li class="progress-point todo">File Viewable</li>
-  </ol>
+ <div class="col-4 px-0" style="border: solid red 1px; overflow: hidden">
+  <div class="container">
+    <ol class="progress-meter">
+     <li class="progress-point done"><label>Upload</label></li><li class="progress-point yellow last"><label>File Viewable</label></li>
+    </ol>
+  </div>
 </div>
+
 </body>
 </html>
