@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bar</title>
+	<style type="text/css">
+		
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.progress-meter {
+  padding: 0;
+}
+
+ol.progress-meter {
+  padding-bottom: 9.5px;
+  list-style-type: none;
+  position:relative;
+}
+ol.progress-meter::after,
+ol.progress-meter::before
+{
+	position:absolute;
+	content:"";
+	height: 10px;
+	 width:70px;
+	 background: #fff;
+	 top:35px;	
+}
+ol.progress-meter::after{
+	right: -13px
+}
+
+ol.progress-meter li {
+  display: inline-block;
+  text-align: center;
+  text-indent: -19px;
+  height: 36px;
+  width: 24.99%;
+  font-size: 12px;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+}
+ol.progress-meter li:before {
+  position: relative;
+  float: left;
+  text-indent: 0;
+  left: -webkit-calc(50% - 9.5px);
+  left: -moz-calc(50% - 9.5px);
+  left: -ms-calc(50% - 9.5px);
+  left: -o-calc(50% - 9.5px);
+  left: calc(50% - 9.5px);
+}
+ol.progress-meter li.done {
+  font-size: 12px;
+}
+ol.progress-meter li.done:before {
+  content: "\2713";
+  height: 19px;
+  width: 19px;
+  line-height: 21.85px;
+  bottom: -28.175px;
+  border: none;
+  border-radius: 19px;
+}
+ol.progress-meter li.todo {
+  font-size: 12px;
+}
+ol.progress-meter li.todo:before {
+  content: "\2B24";
+  font-size: 19px;
+  bottom: -28.175px;
+  line-height: 21.85px;
+  
+}
+ol.progress-meter li.done {
+  color: black;
+  border-bottom-color: yellowgreen;
+}
+ol.progress-meter li.done:before {
+  color: white;
+  background-color: yellowgreen;
+}
+ol.progress-meter li.todo {
+  color: silver;
+  border-bottom-color: silver;
+}
+ol.progress-meter li.todo:before {
+  color: silver;
+}
+
+	</style>
+</head>
+<body>
+<!--Don't add spaces or newlines between the li elements!-->
+
+<div class="container">
+  <ol class="progress-meter">
+    <li class="progress-point done">05:20 mins</li><li class="progress-point done">05:10 mins</li><li class="progress-point done">Link</li><li class="progress-point todo">Connect</li>
+  </ol>
+</div>
+</body>
+</html>
